@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.element {
+    height: 200px;
+    width: 200px;
+    background: #0071ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size:1.35rem;
+    color: white;
+    margin:200px 0 0 500px;
+
+/*     animation-duration: 3s;
+    animation-name: spin;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-fill-mode: forwards; */
+
+    animation: 3s spin ease 1s infinite alternate;
+}
+
+.element:hover{
+    animation-play-state: paused;
+}
+@keyframes spin{
+    0%{
+
+    }
+    50%{
+        scale: 2;
+        transform: rotate(0deg);
+        border-radius: 0;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-radius: 50%;
+        scale: 2;
+    }
+}

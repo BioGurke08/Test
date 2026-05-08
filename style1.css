@@ -1,0 +1,35 @@
+
+body{
+    background: #040716;
+    margin: 0;
+    padding: 0;
+}
+
+.element{
+    height: 30px;
+    width: 30px;
+    border: 2px solid aqua;
+    border-radius: 4px;
+    box-shadow: 0 0 8px aqua, 0 0 8px aqua inset;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: 5s loading ease;
+    animation-duration: infinite;
+    box-sizing: border-box;
+}
+
+@keyframes loading{
+    0%{
+        transform: rotateY(0deg);
+        transform: rotateX(0deg);
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateX(-180deg);
+}
+}
